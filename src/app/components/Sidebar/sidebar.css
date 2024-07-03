@@ -1,0 +1,116 @@
+/* Converted styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar {
+  @apply top-0 fixed h-full bg-[#232b2b] z-[1000] ;
+
+  .sidebar-container {
+    @apply h-full w-full flex flex-col mt-[70px];
+
+    .menu-icon {
+      @apply text-white ml-2 mr-[10px] mt-2 flex justify-end hover:cursor-pointer
+    }
+
+    /*  Nested styles for profile */
+    .profile {
+      @apply  items-center mx-auto mt-6 relative 3xl:mt-10  ;
+
+      img {
+        @apply w-[150px] h-[150px] border-8 border-gray-400 rounded-full object-cover mx-auto;
+      }
+
+      .profile-info {
+        @apply font-bold text-white text-2xl flex justify-center items-center mb-2 mt-1;
+      }
+
+    
+      .Social {
+        @apply flex justify-center items-center mt-4 mx-auto gap-3 ;
+      }
+
+      .Social-icon {
+        @apply  w-8 h-8 flex justify-center items-center bg-gray-600 rounded-full text-xl text-white;
+      }
+    }
+
+     /*Nested styles for menu */
+    .menu {
+      @apply flex flex-col justify-center items-center text-gray-400 mt-10 relative ;
+
+        .menu-item {
+        @apply flex items-center text-xl font-semibold; 
+
+         &.open-hover:hover {
+          @apply bg-gray-700 text-white rounded-full px-6 py-2 items-center transition duration-500 ease-in-out cursor-pointer;
+        }
+
+         &.close-hover:hover {
+          @apply cursor-pointer bg-gray-700 rounded-full p-3 items-center w-12 h-12;
+         } 
+
+         /* &:hover {
+          @apply bg-gray-700 text-white rounded-full px-6 py-2 items-center transition duration-500 ease-in-out cursor-pointer;
+        }   */
+
+      }
+          
+    } 
+  }
+} 
+
+
+
+ /* Custom CSS classes and components */
+@layer components {
+  .primary-btn {
+    @apply inline-block bg-primary text-white cursor-pointer hover:bg-primary/80 py-2 px-4 my-3 rounded-lg;
+  }
+
+  .outline-btn {
+    @apply inline-block ring-2 ring-primary inset-0 text-primary cursor-pointer hover:bg-primary/80 hover:text-white py-2 px-4 my-3 rounded-lg;
+  }
+
+  .social-btn {
+    @apply text-5xl hover:text-primary duration-200 cursor-pointer;
+  }
+
+  .page-shadow {
+    @apply shadow-[inset_0_0_8px_rgba(0,0,0,0.6),12px_12px_14px_rgba(0,0,0,0.9)];
+  }
+} 
+
+
+/*------------------Bar animation----------------*/
+@keyframes moveLeftToRight{
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 300px;
+  }
+}
+.animate-lefttoright{
+  animation: moveLeftToRight 3s infinite ease-in-out;
+}
+
+/*Bar size*/
+@layer components {
+  .bar {
+    @apply relative z-10 inline-block h-1.5  overflow-hidden rounded-full bg-primary bg-opacity-20;
+  }
+
+  .smallbar {
+    @apply absolute left-0 top-0 inline-block h-full w-3 rounded-full bg-primary animate-lefttoright;
+  }
+}
+
+
+
+/* Define styles for tablet and smaller screens */
+/* @media (max-width: 768px) {
+  .sidebar {
+      width: 60px;  Width of the sidebar when minimized 
+   }
+}  */

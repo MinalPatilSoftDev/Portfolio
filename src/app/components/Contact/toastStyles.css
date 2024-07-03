@@ -1,0 +1,17 @@
+/* toastStyles.css */
+
+
+/* Example custom styles */
+.custom-toast-container {
+  width: 400px; /* Adjust the width as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  /* Add any other custom styles here */
+}
+
+.hover-shadow {
+  
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+}
